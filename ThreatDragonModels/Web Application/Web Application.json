@@ -711,8 +711,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "d89e3ff0-121e-4e86-ae71-0120cf0ca576",
             "zIndex": 1,
+            "id": "d89e3ff0-121e-4e86-ae71-0120cf0ca576",
             "data": {
               "type": "tm.Actor",
               "name": "Attacer",
@@ -726,16 +726,16 @@
           },
           {
             "position": {
-              "x": 340,
-              "y": 100
+              "x": 300,
+              "y": 95
             },
             "size": {
-              "width": 60,
-              "height": 60
+              "width": 110,
+              "height": 90
             },
             "attrs": {
               "text": {
-                "text": ""
+                "text": "web server"
               },
               "body": {
                 "stroke": "#333333",
@@ -745,11 +745,11 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "17687cd9-4bf9-4154-a408-7152a7628a93",
             "zIndex": 2,
+            "id": "17687cd9-4bf9-4154-a408-7152a7628a93",
             "data": {
               "type": "tm.Process",
-              "name": "",
+              "name": "web server",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -758,6 +758,44 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 538,
+              "y": 110
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "34e31dc8-a857-46d9-b650-9ca9fcb013b1",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Store",
+              "name": "Store",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
               "threats": []
             }
           }
