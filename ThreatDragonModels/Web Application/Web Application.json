@@ -351,11 +351,344 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.2.0",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 50,
+              "y": 80
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "attacker"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "9e12d41a-69dd-46c9-bab7-40d48cf111cf",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "attacker",
+              "description": "атака",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 263,
+              "y": 70
+            },
+            "size": {
+              "width": 90,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "web server"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "1370d981-187d-4f66-9f0a-0c9611811e6a",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Process",
+              "name": "web server",
+              "description": "тело страницы сайта",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 530,
+              "y": 90
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "user"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "9d24ad38-48ae-4da7-adfe-191a594b0c44",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Store",
+              "name": "user",
+              "description": "жертва атаки",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "JavaScrip",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "a84c1f76-f46e-41d2-86d1-1d0bc6995732",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "внедрение вредоносного JavaScript-кода на страницу, просматриваемую пользователем",
+                  "mitigation": "Использовать инструменты, такие как OWASP ZAP или Burp Suite, которые могут обнаружить XSS-уязвимости.\nРучное тестирование: Вводить JavaScript-код в поля ввода и проверять, выполняется ли он (например, <script>alert('XSS')</script>).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "5bbbaad2-88cb-4d61-ba2c-f593d90279c0",
+            "source": {
+              "cell": "9e12d41a-69dd-46c9-bab7-40d48cf111cf"
+            },
+            "target": {
+              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
+            },
+            "vertices": [
+              {
+                "x": 230,
+                "y": 30
+              },
+              {
+                "x": 260,
+                "y": 50
+              }
+            ],
+            "labels": [
+              "JavaScrip"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "attack",
+              "description": "прием вредоносного сценария",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "7e5b3930-5d83-435b-a56c-9642a5717a7d",
+            "source": {
+              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
+            },
+            "target": {
+              "cell": "9d24ad38-48ae-4da7-adfe-191a594b0c44"
+            },
+            "labels": [
+              "attack"
+            ],
+            "vertices": [
+              {
+                "x": 410,
+                "y": 40
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "request",
+              "description": "запрос ресурса",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "16fe3eea-ec89-4c42-88ac-ed24e761249a",
+            "source": {
+              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
+            },
+            "target": {
+              "cell": "9d24ad38-48ae-4da7-adfe-191a594b0c44"
+            },
+            "labels": [
+              "request"
+            ],
+            "vertices": [
+              {
+                "x": 380,
+                "y": 114
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Getting data",
+              "description": "Похищение важных данных",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "8cb20c29-659a-469f-b77d-4fc500dc46ec",
+            "source": {
+              "cell": "9e12d41a-69dd-46c9-bab7-40d48cf111cf"
+            },
+            "target": {
+              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
+            },
+            "labels": [
+              "Getting data"
+            ],
+            "vertices": [
+              {
+                "x": 130,
+                "y": 160
+              },
+              {
+                "x": 210,
+                "y": 210
+              }
+            ]
+          }
+        ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "Alyna",
-    "threatTop": 1
+    "threatTop": 2
   }
 }
