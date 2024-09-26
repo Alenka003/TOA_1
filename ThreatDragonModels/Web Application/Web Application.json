@@ -707,7 +707,7 @@
       },
       {
         "id": 2,
-        "title": "authorizations",
+        "title": "CSRF (Cross-Site Request Forgery)",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
