@@ -343,9 +343,18 @@
             ]
           }
         ]
+      },
+      {
+        "id": 1,
+        "title": "11",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": []
       }
     ],
-    "diagramTop": 1,
+    "diagramTop": 2,
     "reviewer": "Alyna",
     "threatTop": 1
   }
