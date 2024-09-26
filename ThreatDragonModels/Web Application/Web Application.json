@@ -218,8 +218,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "request",
-              "description": "запрос к серверу, который содержит запрос данных через инъекцию",
+              "name": "responce with injection",
+              "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -229,20 +229,21 @@
               "protocol": "",
               "threats": []
             },
-            "id": "5e478434-986d-4a4e-be7a-a853e0ccddfd",
+            "id": "fbee6bb6-fdab-4fb4-ad14-52c8fb4b277a",
             "labels": [
-              "request"
+              "responce with injection"
             ],
             "source": {
               "cell": "83f5a125-b584-463e-ac73-9da71e1ad8ba"
             },
             "target": {
-              "cell": "b4ba83bb-e818-432e-a5c2-023989c6878b"
+              "x": 110,
+              "y": 180
             },
             "vertices": [
               {
-                "x": 500,
-                "y": 70
+                "x": 220,
+                "y": 260
               }
             ]
           },
@@ -282,10 +283,10 @@
               "responce"
             ],
             "source": {
-              "cell": "83f5a125-b584-463e-ac73-9da71e1ad8ba"
+              "cell": "b4ba83bb-e818-432e-a5c2-023989c6878b"
             },
             "target": {
-              "cell": "b4ba83bb-e818-432e-a5c2-023989c6878b"
+              "cell": "83f5a125-b584-463e-ac73-9da71e1ad8ba"
             },
             "vertices": [
               {
@@ -314,8 +315,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "responce with injection",
-              "description": "",
+              "name": "request",
+              "description": "запрос к серверу, который содержит запрос данных через инъекцию",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -325,22 +326,42 @@
               "protocol": "",
               "threats": []
             },
-            "id": "fbee6bb6-fdab-4fb4-ad14-52c8fb4b277a",
+            "id": "5e478434-986d-4a4e-be7a-a853e0ccddfd",
             "labels": [
-              "responce with injection"
+              "request"
             ],
             "source": {
-              "cell": "c9ac2471-b723-4a2a-9830-a45f2aa4b48c"
+              "cell": "83f5a125-b584-463e-ac73-9da71e1ad8ba"
             },
             "target": {
-              "cell": "83f5a125-b584-463e-ac73-9da71e1ad8ba"
+              "x": 600,
+              "y": 130
             },
             "vertices": [
               {
-                "x": 220,
-                "y": 260
+                "x": 500,
+                "y": 70
+              },
+              {
+                "x": 580,
+                "y": 70
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           }
         ]
       },
