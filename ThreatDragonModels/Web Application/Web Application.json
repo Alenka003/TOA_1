@@ -11,7 +11,7 @@
     "diagrams": [
       {
         "id": 0,
-        "title": "web application vulnerabilities",
+        "title": "sql",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
@@ -346,7 +346,7 @@
       },
       {
         "id": 1,
-        "title": "11",
+        "title": "xss",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
@@ -685,9 +685,18 @@
             ]
           }
         ]
+      },
+      {
+        "id": 2,
+        "title": "API",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": []
       }
     ],
-    "diagramTop": 2,
+    "diagramTop": 3,
     "reviewer": "Alyna",
     "threatTop": 2
   }
