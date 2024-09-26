@@ -692,8 +692,8 @@
         "cells": [
           {
             "position": {
-              "x": 50,
-              "y": 110
+              "x": 30,
+              "y": 90
             },
             "size": {
               "width": 112.5,
@@ -701,7 +701,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Attacer"
+                "text": "Attaker"
               },
               "body": {
                 "stroke": "#333333",
@@ -711,11 +711,11 @@
             },
             "visible": true,
             "shape": "actor",
+            "id": "061b5d43-9164-48bf-9e38-9949083959e0",
             "zIndex": 1,
-            "id": "d89e3ff0-121e-4e86-ae71-0120cf0ca576",
             "data": {
               "type": "tm.Actor",
-              "name": "Attacer",
+              "name": "Attaker",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -726,16 +726,16 @@
           },
           {
             "position": {
-              "x": 300,
-              "y": 95
+              "x": 580,
+              "y": 200
             },
             "size": {
-              "width": 110,
-              "height": 90
+              "width": 60,
+              "height": 60
             },
             "attrs": {
               "text": {
-                "text": "web server"
+                "text": "base"
               },
               "body": {
                 "stroke": "#333333",
@@ -745,11 +745,11 @@
             },
             "visible": true,
             "shape": "process",
+            "id": "694229dc-f026-4f9b-af06-4f2125b9804c",
             "zIndex": 2,
-            "id": "17687cd9-4bf9-4154-a408-7152a7628a93",
             "data": {
               "type": "tm.Process",
-              "name": "web server",
+              "name": "base",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -763,8 +763,334 @@
           },
           {
             "position": {
-              "x": 538,
-              "y": 110
+              "x": 190,
+              "y": 200
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "user"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "f78efd32-72fb-4152-9942-4a50b3e14ece",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Store",
+              "name": "user",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "request",
+              "description": "Запрос на отправку, содержащую учетные данные жертвы",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "840bfdc7-44d9-426c-94c8-df2fc2d64f89",
+            "source": {
+              "cell": "573166d3-112c-4a5c-8bfa-1dbc0023fc14"
+            },
+            "target": {
+              "cell": "694229dc-f026-4f9b-af06-4f2125b9804c"
+            },
+            "labels": [
+              "request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "request",
+              "description": "отправка на сайт атакующего",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "c5f3a690-9b1f-4af9-9252-038025d6d5d3",
+            "source": {
+              "cell": "f78efd32-72fb-4152-9942-4a50b3e14ece"
+            },
+            "target": {
+              "cell": "71321372-7097-4f27-8eb2-c9f225908f2c"
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": 130
+              }
+            ],
+            "labels": [
+              "request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "request",
+              "description": "Содержит paylaod, который отправляет запрос от имени user",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "16cab0c0-45c9-448e-b56f-961e56b1c742",
+            "source": {
+              "cell": "71321372-7097-4f27-8eb2-c9f225908f2c"
+            },
+            "target": {
+              "cell": "573166d3-112c-4a5c-8bfa-1dbc0023fc14"
+            },
+            "vertices": [
+              {
+                "x": 530,
+                "y": 40
+              }
+            ],
+            "labels": [
+              "request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "answer",
+              "description": "Принимает запрос и меняет адрес электронной почты",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "a8234da8-e7ff-4781-8131-dc85f72e9e0e",
+            "source": {
+              "cell": "694229dc-f026-4f9b-af06-4f2125b9804c"
+            },
+            "target": {
+              "cell": "061b5d43-9164-48bf-9e38-9949083959e0"
+            },
+            "labels": [
+              "answer"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "request",
+              "description": "Нападавший отправляет вредоносную ссылку для изменения ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "8c3e4a52-3f2a-4b08-8fb8-62a722976a0b",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Злоумышленник может создать вредоносный сайт с кодом, который отправляет запросы на другой сайт (например, перевод денег) от имени пользователя. Пользователь вводит свои данные, они отправляются на сервер атакующего и изменённые данные отправляются на веб-сайт",
+                  "mitigation": "Использовать инструменты для автоматизированного тестирования (например, OWASP ZAP), чтобы проверить наличие CSRF-защит.\nПроверять формы на наличие токенов CSRF и убедиться, что они проверяются на сервере.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "6ae768ab-e239-4930-bf97-fc6bc2673c71",
+            "source": {
+              "cell": "061b5d43-9164-48bf-9e38-9949083959e0"
+            },
+            "target": {
+              "cell": "f78efd32-72fb-4152-9942-4a50b3e14ece"
+            },
+            "vertices": [
+              {
+                "x": 120,
+                "y": 230
+              }
+            ],
+            "labels": [
+              "request"
+            ]
+          },
+          {
+            "position": {
+              "x": 570,
+              "y": 60
+            },
+            "size": {
+              "width": 80,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "webserver "
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "573166d3-112c-4a5c-8bfa-1dbc0023fc14",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": "webserver ",
+              "description": "веб-сайт атакующего",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 370,
+              "y": 80
             },
             "size": {
               "width": 120,
@@ -782,8 +1108,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "34e31dc8-a857-46d9-b650-9ca9fcb013b1",
-            "zIndex": 3,
+            "id": "71321372-7097-4f27-8eb2-c9f225908f2c",
+            "zIndex": 12,
             "data": {
               "type": "tm.Store",
               "name": "Store",
@@ -804,6 +1130,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "Alyna",
-    "threatTop": 2
+    "threatTop": 3
   }
 }
