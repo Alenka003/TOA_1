@@ -373,8 +373,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "9e12d41a-69dd-46c9-bab7-40d48cf111cf",
             "zIndex": 1,
+            "id": "9e12d41a-69dd-46c9-bab7-40d48cf111cf",
             "data": {
               "type": "tm.Actor",
               "name": "attacker",
@@ -407,8 +407,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "1370d981-187d-4f66-9f0a-0c9611811e6a",
             "zIndex": 2,
+            "id": "1370d981-187d-4f66-9f0a-0c9611811e6a",
             "data": {
               "type": "tm.Process",
               "name": "web server",
@@ -447,8 +447,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "9d24ad38-48ae-4da7-adfe-191a594b0c44",
             "zIndex": 3,
+            "id": "9d24ad38-48ae-4da7-adfe-191a594b0c44",
             "data": {
               "type": "tm.Store",
               "name": "user",
@@ -516,6 +516,9 @@
               }
             },
             "id": "5bbbaad2-88cb-4d61-ba2c-f593d90279c0",
+            "labels": [
+              "JavaScrip"
+            ],
             "source": {
               "cell": "9e12d41a-69dd-46c9-bab7-40d48cf111cf"
             },
@@ -531,9 +534,6 @@
                 "x": 260,
                 "y": 50
               }
-            ],
-            "labels": [
-              "JavaScrip"
             ]
           },
           {
@@ -568,15 +568,15 @@
               "threats": []
             },
             "id": "7e5b3930-5d83-435b-a56c-9642a5717a7d",
+            "labels": [
+              "attack"
+            ],
             "source": {
               "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
             },
             "target": {
               "cell": "9d24ad38-48ae-4da7-adfe-191a594b0c44"
             },
-            "labels": [
-              "attack"
-            ],
             "vertices": [
               {
                 "x": 410,
@@ -616,15 +616,15 @@
               "threats": []
             },
             "id": "16fe3eea-ec89-4c42-88ac-ed24e761249a",
+            "labels": [
+              "request"
+            ],
             "source": {
               "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
             },
             "target": {
               "cell": "9d24ad38-48ae-4da7-adfe-191a594b0c44"
             },
-            "labels": [
-              "request"
-            ],
             "vertices": [
               {
                 "x": 380,
@@ -663,7 +663,7 @@
               "protocol": "",
               "threats": []
             },
-            "id": "8cb20c29-659a-469f-b77d-4fc500dc46ec",
+            "id": "55e7475b-ff15-4ffd-a424-59e0357c38e8",
             "source": {
               "cell": "9e12d41a-69dd-46c9-bab7-40d48cf111cf"
             },
@@ -675,12 +675,8 @@
             ],
             "vertices": [
               {
-                "x": 130,
-                "y": 160
-              },
-              {
                 "x": 210,
-                "y": 210
+                "y": 220
               }
             ]
           }
