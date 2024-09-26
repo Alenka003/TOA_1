@@ -489,6 +489,54 @@
             "shape": "flow",
             "attrs": {
               "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "attack",
+              "description": "прием вредоносного сценария",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "7e5b3930-5d83-435b-a56c-9642a5717a7d",
+            "labels": [
+              "attack"
+            ],
+            "source": {
+              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
+            },
+            "target": {
+              "cell": "9d24ad38-48ae-4da7-adfe-191a594b0c44"
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 40
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
                 "stroke": "red",
                 "strokeWidth": 2.5,
                 "targetMarker": {
@@ -544,7 +592,8 @@
               "cell": "9e12d41a-69dd-46c9-bab7-40d48cf111cf"
             },
             "target": {
-              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
+              "x": 290,
+              "y": 70
             },
             "vertices": [
               {
@@ -552,56 +601,8 @@
                 "y": 30
               },
               {
-                "x": 260,
-                "y": 50
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "attack",
-              "description": "прием вредоносного сценария",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "7e5b3930-5d83-435b-a56c-9642a5717a7d",
-            "labels": [
-              "attack"
-            ],
-            "source": {
-              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
-            },
-            "target": {
-              "cell": "9d24ad38-48ae-4da7-adfe-191a594b0c44"
-            },
-            "vertices": [
-              {
-                "x": 410,
-                "y": 40
+                "x": 270,
+                "y": 30
               }
             ]
           },
@@ -641,15 +642,15 @@
               "request"
             ],
             "source": {
-              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
+              "cell": "9d24ad38-48ae-4da7-adfe-191a594b0c44"
             },
             "target": {
-              "cell": "9d24ad38-48ae-4da7-adfe-191a594b0c44"
+              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
             },
             "vertices": [
               {
-                "x": 380,
-                "y": 114
+                "x": 410,
+                "y": 120
               }
             ]
           },
@@ -685,15 +686,16 @@
               "threats": []
             },
             "id": "55e7475b-ff15-4ffd-a424-59e0357c38e8",
-            "source": {
-              "cell": "9e12d41a-69dd-46c9-bab7-40d48cf111cf"
-            },
-            "target": {
-              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
-            },
             "labels": [
               "Getting data"
             ],
+            "source": {
+              "cell": "1370d981-187d-4f66-9f0a-0c9611811e6a"
+            },
+            "target": {
+              "x": 120,
+              "y": 150
+            },
             "vertices": [
               {
                 "x": 210,
